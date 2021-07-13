@@ -52,3 +52,10 @@ process.on('unhandledRejection', err => {
 });
 
 // console.log(vivek); //vivek is not defined
+
+process.on('SIGTERM', () => {
+  console.log('SIGTERM recived 🍔🍕 Shutting Down');
+  server.close(() => {
+    console.log('💥 Process terminated');
+  });
+});
