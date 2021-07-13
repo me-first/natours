@@ -1,0 +1,17 @@
+extends baseEmail 
+
+block content 
+    p=`HI ${firstName}`
+    p Congratulation! You recived 7 times return on your shares, that you invested in last couple of months.
+    p If you are intrested, To know the exact amount you gonna receiving. Please Check Your Status on below Link. Its safe!
+    table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+        tbody
+            tr
+                td(align='left')
+                    table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+                        tbody
+                            tr
+                                td
+                                    a(href=`${url}`, target='_blank') Your Status
+    p If you need any help, please don't hesitate to contact me!
+    p -CEO
