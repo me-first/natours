@@ -13,7 +13,7 @@ const app = require('./app');
 
 dotenv.config({ path: './config.env' });
 
-const DB = 'mongodb+srv://vivekdb:<PASSWORD>@cluster0.0ksdi.mongodb.net/natours?retryWrites=true&w=majority'.replace(
+const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
   process.env.DATABASE_PASSWORD
 );
